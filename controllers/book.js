@@ -104,6 +104,7 @@ module.exports.displayEditPage = (req, res, next) => {
 // Processes the data submitted from the Edit form to update a book
 module.exports.processEditPage = (req, res, next) => {
 
+    //update function 
     book.update({
         _id: req.params.id
     }, {
@@ -130,6 +131,7 @@ module.exports.processEditPage = (req, res, next) => {
 // Deletes a book based on its id.
 module.exports.performDelete = (req, res, next) => {
 
+    //delete function
     book.deleteOne({
         _id: req.params.id
     }, (err, bookToShow) => {
